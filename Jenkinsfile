@@ -22,6 +22,7 @@ pipeline {
             emailext attachLog: true, attachmentsPattern: '**/TEST*xml',
 	    body: 'Bod-DAy!', recipientProviders: [culprits()], subject:
             '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!'
+            // hello there
 	}
     }
 }
