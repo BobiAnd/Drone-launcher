@@ -1,4 +1,25 @@
 pipeline {
+   agent any
+      stages {
+       stage('Checkout') {
+         steps {
+            git 'https://github.com/BobiAnd/Drone-launcher'
+                }
+                  }
+
+    stage('Build') {
+      steps {
+        sh "mvn -B compile"
+         }
+           }
+       stage('Test') {
+        steps {
+          sh "mvn -B test"
+           chuckNorris()
+              }
+       }
+
+pipeline {
     agent any
     stages {
 	stage('Launch launcher') {
