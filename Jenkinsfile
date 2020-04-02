@@ -2,24 +2,16 @@
 
 pipeline {
     agent any
+     stages {
+           stage('Checkout') {
+             steps {
+                git 'https://github.com/BobiAnd/Jenkins-projekt'
+                    }
+                      }
     stages {
-	stage('Launch launcher')
-	('Checkout') {
+	stage('Launch launcher') {
 	    steps {
 		bat 'python dronelauncher_python.py'
-		 git 'https://github.com/BobiAnd/Drone-launcher'
-		  }
-                           }
-
-             stage('Build') {
-               steps {
-                 sh "mvn -B compile"
-                  }
-                    }
-                stage('Test') {
-                 steps {
-                   sh "mvn -B test"
-                    chuckNorris()
             }
 	}
     }
