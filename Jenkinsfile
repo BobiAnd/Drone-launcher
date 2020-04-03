@@ -2,9 +2,11 @@ pipeline {
     agent any
     stages {
     stage('build') {
+     steps {
       dir("build_folder"){
           bat "run_build_windows.bat"
       }
+    }
     }
 	stage('Launch launcher') {
 	    steps {
