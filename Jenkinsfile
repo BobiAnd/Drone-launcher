@@ -4,7 +4,7 @@ pipeline {
 	stage('Launch launcher') {
 	    steps {
 		bat 'python dronelauncher_python.py &'
-		bat 'sleep 60 ; exit'
+		bat 'TIMEOUT /T 10'
             }
 	}
     }
