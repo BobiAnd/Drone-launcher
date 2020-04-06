@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                       bat  'timeout /t 30'
+                       bat  'timeout /t 30 ; exit '
                        }
 
                     }
