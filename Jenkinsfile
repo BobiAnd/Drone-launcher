@@ -14,7 +14,7 @@ pipeline {
                  steps {
                                      bat 'sleep 60 ; exit'
 
-
+                    }
                 }
 
                     }
