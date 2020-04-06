@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                                     bat "sleep 30; exit"
+                                    ping -n 30 127.0.0.1 >nul; exit
 
                     }
                 }
