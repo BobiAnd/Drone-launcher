@@ -10,6 +10,7 @@ pipeline {
              },
               "exiting program": {
              bat 'sleep 60 ; exit'
+             // sh 'sleep 60 ; exit'
 
                 }
                     )
