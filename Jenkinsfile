@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                       bat  "TIMEOUT /T 30"
+                       bat  "ping 127.0.0.1 -n1 -w 10000 >NUL"
                        bat 'exit'
                        }
 
