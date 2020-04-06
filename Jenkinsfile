@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                          cscript /nologo sleep.js 5000; exit
+                       bat  'timeout /t 30'
 
                     }
                 }
