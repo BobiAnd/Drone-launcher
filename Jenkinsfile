@@ -2,15 +2,18 @@ pipeline {
     agent any
     stages {
 	stage('Launch launcher') {
-	    steps {
-	     parallel(
-             "Status Code": {
-            bat 'python dronelauncher_python.py'
 
-             },
-              "exiting program": {
-             bat 'sleep 60 ; exit'
-             // sh 'sleep 60 ; exit'
+                   parallel{
+                       stage ('Deploy to Staging'){
+                           stage
+                            sh  bat 'python dronelauncher_python.py'
+
+             }
+            }
+             stage ("exiting program""){
+                                steps {
+                                     bat 'sleep 60 ; exit'
+         
 
                 }
                     )
