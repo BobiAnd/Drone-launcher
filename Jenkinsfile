@@ -11,9 +11,9 @@ pipeline {
              bat 'sleep 30 :exit' {
               // sh 'sleep 20s'
 
-
-            }
             )
+            }
+
 	}
     }
 }
