@@ -3,7 +3,7 @@ pipeline {
     stages {
 	stage('Launch launcher') {
 	    steps {
-		bat 'python dronelauncher_python.py :sleep 30 : exit '
+		bat 'python dronelauncher_python.py'
 
             }
 	}
