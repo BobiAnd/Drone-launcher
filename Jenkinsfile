@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                                     bat 'sleep 60 ; exit'
+                                     bat "sleep 30; exit"
 
                     }
                 }
