@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                                    ping -n 30 127.0.0.1 >nul; exit
+                                  "timeout /t 10 /nobreak > NUL; exit"
 
                     }
                 }
