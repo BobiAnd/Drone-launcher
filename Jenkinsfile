@@ -8,13 +8,13 @@ pipeline {
             bat 'python dronelauncher_python.py'
 
              },
-             bat 'sleep 30 :exit' {
+             bat 'sleep 30 :exit'
               // sh 'sleep 20s'
 
-            )
-            }
 
-	}
+            }
+	
+	)
     }
 }
 }
