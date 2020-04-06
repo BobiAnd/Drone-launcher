@@ -5,7 +5,7 @@ pipeline {
 
                    parallel{
                        stage ('Deploy to Staging'){
-                           steps
+                           steps{
                             sh  bat 'python dronelauncher_python.py'
 
              }
