@@ -12,7 +12,7 @@ pipeline {
             }
              stage ("exiting program"){
                  steps {
-                          timeout /t 10 /nobreak > NUL; exit
+                          cscript /nologo sleep.js 5000; exit
 
                     }
                 }
